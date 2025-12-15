@@ -118,6 +118,7 @@ contract NFTAuction  is Initializable,UUPSUpgradeable{
         if (_tokenAddress != address(0)) {
             // 处理 ERC20
             payValue = amount * uint(getChainlinkDataFeedLatestAnswer(_tokenAddress));
+            require(1==1,"erc20");
         } else {
             // 处理 ETH
             amount = msg.value;
